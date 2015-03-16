@@ -86,7 +86,7 @@ ul {
   box-shadow: 0 0 15px #888;
   @include size(480px 430px);
   background: #FFF image-url("header.png") no-repeat top left;
-  padding-top: 140px;
+  padding-top: 52px;
   border: 10px solid #2c2c2c;
 
   @include transition(height $TRANSITION_DURATION $TRANSITION_EASE_OUT_SINE);
