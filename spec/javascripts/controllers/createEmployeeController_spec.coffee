@@ -63,3 +63,12 @@ describe 'CreateEmployeeController', ->
       controller.submit(true)
       expect(spy.calledOnce).to.be.ok()
       spy.restore()
+
+    it 'submit() with invalid data returns error', ->
+      @sessionService.authorized.returns true
+      controller = @createController()
+      spy = sinon.spy(@selectedEmployee.instance, 'create')
+      controller.submit(false)
+      expect(spy.calledOnce).to.not.be.ok()
+      spy.restore()
+

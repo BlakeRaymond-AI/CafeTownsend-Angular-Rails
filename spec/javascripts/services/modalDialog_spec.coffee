@@ -10,3 +10,7 @@ describe 'ModalDialog', ->
 
   it 'is injectable', ->
     expect(@service).to.be.ok()
+
+  it 'can confirm messages', ->
+    @service.confirm("message")
+    expect(@service).to.be.ok()

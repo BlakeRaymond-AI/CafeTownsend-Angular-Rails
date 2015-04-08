@@ -30,6 +30,12 @@ describe 'HeaderController', ->
       controller = @createController()
       expect(controller.user).not.to.be(undefined)
 
+  describe 'authorized()', ->
+    it 'sets authorized depending on the current session', ->
+      @sessionService.authorized.returns true
+      controller = @createController()
+      expect(controller.authorized()).to.be(true)
+
   describe 'logout()', ->
 
     it 'calls service to logout an user', ->
