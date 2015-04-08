@@ -38,9 +38,9 @@ angular.module('cafeTownsend.employee')
         SelectedEmployee.instance.create()
         .then ->
             self.browseToOverview()
-          , (error) ->
-            message = "Error trying to create a new employee: #{JSON.stringify(error.data)})"
-            alert message
+        , (error) ->
+          message = "Error trying to create a new employee: #{JSON.stringify(error.data)})"
+          alert message
 
     @browseToOverview = ->
       # clear selected employee
